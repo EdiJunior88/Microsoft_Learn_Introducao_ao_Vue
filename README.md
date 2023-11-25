@@ -5,7 +5,12 @@
 
 <hr>
 
+<strong>Site do Projeto:</strong> <a href="https://microsoft-learn-introducao-ao-vue.onrender.com/">https://microsoft-learn-introducao-ao-vue.onrender.com/</a>
+
+<hr>
+
 <strong>Introdução ao Vue</strong>
+
 <ul>
   <li>Introdução</li>
   <li>Introdução ao Vue.js</li>
@@ -17,6 +22,7 @@
 </ul>
 
 <strong>Exibições de página dinâmicas com o Vue.js</strong>
+
 <ul>
   <li>Introdução às exibições dinâmicas</li>
   <li>Renderizar listas</li>
@@ -28,6 +34,7 @@
 </ul>
 
 <strong>Trabalhar com eventos e dados no Vue.js</strong>
+
 <ul>
   <li>Visão geral de dados dinâmicos e eventos</li>
   <li>Trabalhar com formulários</li>
@@ -41,6 +48,7 @@
 </ul>
 
 <strong>Introdução à CLI do Vue e a componentes de arquivo único no Vue.js.</strong>
+
 <ul>
   <li>Introdução à CLI e aos componentes personalizados do Vue</li>
   <li>Introdução à CLI do Vue</li>
