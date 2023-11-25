@@ -1,10 +1,14 @@
 <script setup>
-let firstName = 'Edivaldo'
-let lastName = 'Junior'
+let productName = 'Reserve um cruzeiro para a Lua'
+let productDescription =
+  'Faça um cruzeiro até a lua em nosso luxuoso ônibus espacial. Veja os astronautas trabalhando do lado de fora da Estação Espacial Internacional'
 </script>
 
 <template>
-  <div>{{ firstName }}, {{ lastName }}</div>
+  <div class="nav-bar"></div>
+  <h1>Excursões pela Galáxia da Relecloud</h1>
+  <h2>{{ productName }}</h2>
+  <div>{{ productDescription }}</div>
 </template>
 
 <style lang="css" scoped></style>
