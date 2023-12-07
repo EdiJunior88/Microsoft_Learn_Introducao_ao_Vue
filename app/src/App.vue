@@ -1,14 +1,13 @@
 <script setup>
 import { reactive } from 'vue'
 
-const classObject = reactive({
-  centered: true,
-  active: true
+const styleObject = reactive({
+  'background-color': 'red',
 })
 </script>
 
 <template>
-  <div :class="classObject">Olá, Vue!</div>
+  <div :style="styleObject">Olá, Vue!</div>
 </template>
 
 <style lang="css" scoped>
