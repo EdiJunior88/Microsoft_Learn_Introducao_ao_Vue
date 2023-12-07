@@ -1,14 +1,12 @@
 <script setup>
-let productName = 'Reserve um cruzeiro para a Lua'
-let productDescription =
-  'Faça um cruzeiro até a lua em nosso luxuoso ônibus espacial. Veja os astronautas trabalhando do lado de fora da Estação Espacial Internacional'
+const imageSource =
+  'https://img.freepik.com/fotos-gratis/um-por-do-sol-sobre-uma-praia-com-um-por-do-sol-dourado-ao-fundo_188544-33419.jpg?'
 </script>
 
 <template>
-  <div class="nav-bar"></div>
-  <h1>Excursões pela Galáxia da Relecloud</h1>
-  <h2>{{ productName }}</h2>
-  <div>{{ productDescription }}</div>
+  <div>
+    <img v-bind:src="imageSource" />
+  </div>
 </template>
 
 <style lang="css" scoped></style>
