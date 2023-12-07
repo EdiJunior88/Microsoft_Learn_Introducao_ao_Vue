@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 
 const styleObject = reactive({
-  'background-color': 'red',
+  'background-color': 'red'
 })
 </script>
 
