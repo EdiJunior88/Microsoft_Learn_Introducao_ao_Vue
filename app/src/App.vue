@@ -5,7 +5,7 @@ const imageSource =
 
 <template>
   <div>
-    <img v-bind:src="imageSource" />
+    <img :src="imageSource" />
   </div>
 </template>
 
