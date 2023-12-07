@@ -1,22 +1,20 @@
-<script setup>
-import { reactive } from 'vue'
+<script setup lang="js">
+let productImage = '../assets/cruise.jpg'
+let productImageDescription =
+  'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente'
+let productImageStyle = { 'border-radius': '15px' }
 
-const styleObject = reactive({
-  'background-color': 'red'
-})
+let productName = 'Reserve um cruzeiro para a Lua'
+let productDescription =
+  'Faça um cruzeiro até a lua em nosso luxuoso ônibus espacial. Veja os astronautas trabalhando do lado de fora da Estação Espacial Internacional'
 </script>
 
 <template>
-  <div :style="styleObject">Olá, Vue!</div>
+  <div class="nav-bar"></div>
+  <h1>Excursões pela Galáxia da Relecloud</h1>
+  <h2>{{ productName }}</h2>
+  <div>{{ productDescription }}</div>
+  <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
 </template>
 
-<style lang="css" scoped>
-.centered {
-  display: flex;
-}
-
-.active {
-  display: flex;
-  justify-content: center;
-}
-</style>
+<style lang="css" scoped></style>
