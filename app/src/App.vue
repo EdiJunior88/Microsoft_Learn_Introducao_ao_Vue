@@ -1,5 +1,5 @@
 <script setup lang="js">
-import productImage from "@/assets/cruise.jpg"
+import productImage from '@/assets/cruise.jpg'
 
 let productImageDescription =
   'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente'
