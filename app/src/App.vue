@@ -1,5 +1,5 @@
 <script setup lang="js">
-let productImage = '../assets/cruise.jpg'
+let productImage = 'src/assets/cruise.jpg'
 let productImageDescription =
   'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente'
 let productImageStyle = { 'border-radius': '15px' }
