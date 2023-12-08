@@ -1,5 +1,5 @@
 <script setup lang="js">
-let productImage = new URL('@/assets/cruise.jpg', import.meta.url) 
+let productImage = new URL('@/assets/cruise.jpg', import.meta.url)
 let productImageDescription =
   'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente'
 let productImageStyle = { 'border-radius': '15px' }
