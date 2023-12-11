@@ -1,15 +1,15 @@
 <script setup lang="js">
 import productImage from '@/assets/cruise.jpg'
 
-let productImageDescription =
+const productImageDescription =
   'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente'
-let productImageStyle = { 'border-radius': '15px' }
+const productImageStyle = { 'border-radius': '15px' }
 
-let productName = 'Reserve um cruzeiro para a Lua'
-let productDescription =
+const productName = 'Reserve um cruzeiro para a Lua'
+const productDescription =
   'Faça um cruzeiro até a lua em nosso luxuoso ônibus espacial. Veja os astronautas trabalhando do lado de fora da Estação Espacial Internacional'
 
-let produtoClasses = [
+const produtoClasses = [
   {
     nome: 'Econômica',
     preco: 125000,
@@ -62,5 +62,3 @@ let produtoClasses = [
     <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
   </div>
 </template>
-
-<style lang="css" scoped></style>
