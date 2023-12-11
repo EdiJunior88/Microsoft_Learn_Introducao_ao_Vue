@@ -1,16 +1,29 @@
 <script setup lang="js">
 const name = 'Cheryl'
 const status = -1
-const active = true
+const ativo = true
 const benefíciosSelecionados = 'yes'
-const statusList = ['tempo integral', 'meio período', 'contratante']
+const statusLista = ['tempo integral', 'meio período', 'contratante']
 </script>
 
 <template>
   <input type="text" v-model="name" />
-  <input type="checkbox" v-model="active" /> Está ativo
-  <input type="checkbox" v-model="benefíciosSelecionados" true-value="yes" false-value="no" />
-  Benefícios selecionado: {{ benefíciosSelecionados }}
+
+  <label>Está ativo <input type="checkbox" v-model="ativo" /></label>
+
+  <label
+    >Benefícios selecionado: {{ benefíciosSelecionados
+    }}<input type="checkbox" v-model="benefíciosSelecionados" true-value="yes" false-value="no"
+  /></label>
+
+  <select v-model="statusIndex">
+    <!-- Crie uma mensagem para selecionar -->
+    <option disabled value="">Por favor selecione um item</option>
+    <!-- Use o v-for para criar uma lista de opções -->
+    <option v-for="(status, index) in statusLista" :value="index" :key="index">
+      {{ status }}
+    </option>
+  </select>
 </template>
 
 <style lang="css" scoped></style>
