@@ -8,6 +8,9 @@ const statusList = ['tempo integral', 'meio período', 'contratante']
 
 <template>
   <input type="text" v-model="name" />
+  <input type="checkbox" v-model="active" /> Está ativo
+  <input type="checkbox" v-model="benefíciosSelecionados" true-value="yes" false-value="no" />
+  Benefícios selecionado: {{ benefíciosSelecionados }}
 </template>
 
 <style lang="css" scoped></style>
