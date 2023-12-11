@@ -34,7 +34,7 @@ const reserva = {
     <div>{{ produto.descricao }}</div>
     <hr />
 
-    <!-- TODO: Adicionando formulário de reserva -->
+    <!-- TODO: Adicionando formulário de reserva de compra -->
     <form v-show="!reserva.completo">
       <h2>Reserve agora!</h2>
       <div class="row">
@@ -58,7 +58,7 @@ const reserva = {
       </div>
     </form>
 
-    <!-- TODO: Adicionar código para exibir classes -->
+    <!-- TODO: Adicionando código para exibir imagem -->
     <img :src="produto.imagem.src" :alt="produto.imagem.descricao" :style="produto.imagem.style" />
   </div>
 </template>
