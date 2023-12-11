@@ -1,29 +1,64 @@
 <script setup lang="js">
-const name = 'Cheryl'
-const status = -1
-const ativo = true
-const benefíciosSelecionados = 'yes'
-const statusLista = ['tempo integral', 'meio período', 'contratante']
+import produtoImagem from '@/assets/cruise.jpg'
+
+const produto = {
+  nome: 'Reserve um cruzeiro para a Lua',
+  descricao:
+    'Faça um cruzeiro até a lua em nosso luxuoso ônibus espacial. Veja os astronautas trabalhando do lado de fora da Estação Espacial Internacional',
+  imagem: {
+    src: produtoImagem,
+    descricao:
+      'Um astronauta flutua do lado de fora da janela enquanto você se senta confortavelmente',
+    style: { 'border-radius': '15px' }
+  },
+  cabines: [
+    { nome: 'Econômica', preco: 125000 },
+    { nome: 'Executiva', preco: 275000 },
+    { nome: 'VIP', preco: 430000 }
+  ]
+}
+
+const reserva = {
+  cabineIndex: 0,
+  notas: '',
+  completo: false
+}
 </script>
 
 <template>
-  <input type="text" v-model="name" />
+  <div class="nav-bar"></div>
 
-  <label>Está ativo <input type="checkbox" v-model="ativo" /></label>
+  <div id="app">
+    <h1>Excursões pela Galáxia da Relecloud</h1>
+    <h2>{{ produto.nome }}</h2>
+    <div>{{ produto.descricao }}</div>
+    <hr />
 
-  <label
-    >Benefícios selecionado: {{ benefíciosSelecionados
-    }}<input type="checkbox" v-model="benefíciosSelecionados" true-value="yes" false-value="no"
-  /></label>
+    <!-- TODO: Adicionando formulário de reserva -->
+    <form v-show="!reserva.completo">
+      <h2>Reserve agora!</h2>
+      <div class="row">
+        <label for="produto.cabine">Selecionar classe:</label>
+        <select id="produto.cabine" v-model="reserva.cabineIndex">
+          <option v-for="(cabine, index) in produto.cabines" :key="index" :value="index">
+            {{ cabine.nome }}
+            {{
+              cabine.preco.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+              })
+            }}
+          </option>
+        </select>
+      </div>
 
-  <select v-model="statusIndex">
-    <!-- Crie uma mensagem para selecionar -->
-    <option disabled value="">Por favor selecione um item</option>
-    <!-- Use o v-for para criar uma lista de opções -->
-    <option v-for="(status, index) in statusLista" :value="index" :key="index">
-      {{ status }}
-    </option>
-  </select>
+      <div class="row">
+        <label for="notas">Notas:</label>
+        <textarea v-model="reserva.notas" rows="3"></textarea>
+      </div>
+    </form>
+
+    <!-- TODO: Adicionar código para exibir classes -->
+    <img :src="produto.imagem.src" :alt="produto.imagem.descricao" :style="produto.imagem.style" />
+  </div>
 </template>
-
-<style lang="css" scoped></style>
