@@ -27,7 +27,6 @@ const reserva = {
 // TODO: Adicione a função
 function reservaCabine() {
   reserva.completo = true
-  console.log(reserva)
 }
 </script>
 
