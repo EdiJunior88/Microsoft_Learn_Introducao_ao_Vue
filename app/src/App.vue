@@ -7,7 +7,7 @@ function displayName() {
 </script>
 
 <template>
-  <div></div>
+  <button @click="displayName">Display name</button>
 </template>
 
 <style lang="css" scoped></style>
