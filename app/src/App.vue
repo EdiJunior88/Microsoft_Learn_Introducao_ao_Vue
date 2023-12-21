@@ -24,7 +24,7 @@ const reserva = {
   completo: false
 }
 
- // TODO: Adicione a função
+// TODO: Adicione a função
 function reservaCabine() {
   reserva.completo = true
   console.log(reserva)
@@ -63,7 +63,10 @@ function reservaCabine() {
         <textarea id="notas" v-model="reserva.notas" rows="3"></textarea>
       </div>
 
-     
+      <div class="row">
+        <!--TODO: Adicionando o botão a partir daqui -->
+        <button class="button" type="submit" @click="reservaCabine">Reserve agora!</button>
+      </div>
     </form>
 
     <!-- TODO: Adicionando código para exibir imagem -->
