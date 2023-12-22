@@ -1,8 +1,13 @@
 <script setup lang="js">
 defineProps({
-  name: String,
-  age: Number
+  user: {
+    name: String,
+    age: Number
+  }
 })
 </script>
 
-<template>{{ name }} {{ age }}</template>
+<template>
+  <div>Name: {{user.name}}</div>
+  <div>Age: {{user.age}}</div>
+</template>
