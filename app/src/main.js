@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import '../css/styles.css'
+import HostComponent from './components/HostComponent.vue'
 
-const app = createApp(App)
+const host = createApp(HostComponent)
 
-app.mount('#app')
+host.mount('#host')

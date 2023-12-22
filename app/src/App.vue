@@ -1,7 +1,7 @@
-<script src="./hello.js"></script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>Hello, world</div>
+  <div>App.vue</div>
 </template>
 
-<style src="./style.css"></style>
+<style lang="css" scoped></style>
