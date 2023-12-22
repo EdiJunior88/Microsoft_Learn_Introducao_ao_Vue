@@ -1,5 +1,8 @@
 <script setup lang="js">
-defineProps(['name', 'age'])
+defineProps({
+  name: String,
+  age: Number
+})
 </script>
 
 <template>{{ name }} {{ age }}</template>
