@@ -1,18 +1,18 @@
 <script setup lang="js">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
-const reservas = defineProps({
+const props = defineProps({
   reservas: Array
 })
 
 const totalPainel = computed(() => {
-  let custoTotal = 0
+  const custoTotal = ref(0)
 
-  if (reservas && reservas.length > 0) {
-    custoTotal = reservas.map((b) => b.preco).reduce((a, b) => a + b)
+  if (props.reservas && props.reservas.length > 0) {
+    custoTotal.value = props.reservas.map((b) => b.preco).reduce((a, b) => a + b)
   }
 
-  return `${custoTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`
+  return custoTotal.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 })
 </script>
 
@@ -21,7 +21,7 @@ const totalPainel = computed(() => {
     <h2>Reservas atuais:</h2>
 
     <div class="row" v-for="(reserva, index) in reservas" :key="index">
-      <div>{{ reserva.nome }}</div>
+      <div>{{ reserva.cabine }}</div>
     </div>
 
     <h3 class="row">Total: {{ totalPainel }}</h3>

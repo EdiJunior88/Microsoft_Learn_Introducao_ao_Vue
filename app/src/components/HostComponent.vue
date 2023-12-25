@@ -1,7 +1,7 @@
 <script setup lang="js">
 import { ref } from 'vue'
 import ListaReserva from './ListaReserva.vue'
-// TODO: Registre o próximo componente
+import FormularioReserva from './FormularioReserva.vue'
 
 const produto = ref({
   nome: 'Reserve um cruzeiro para a Lua',
@@ -15,6 +15,16 @@ const produto = ref({
 })
 
 const reservas = ref([{ cabine: 'Amostra', preco: 0 }])
+
+// TODO: Adicionando função para uma nova reserva
+function adicionandoReserva(cabineIndex) {
+  const cabine = produto.value.cabines[cabineIndex]
+  const reserva = {
+    cabine: cabine.nome,
+    preco: cabine.preco
+  }
+  reservas.value.push(reserva)
+}
 </script>
 
 <template>
@@ -28,6 +38,10 @@ const reservas = ref([{ cabine: 'Amostra', preco: 0 }])
 
     <div>
       <!-- TODO: Adicionando Formulário de Reserva -->
+      <formulario-reserva
+        @reserva-criada="adicionandoReserva"
+        :cabines="produto.cabines"
+      ></formulario-reserva>
     </div>
 
     <div>
