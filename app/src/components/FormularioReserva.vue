@@ -1,8 +1,12 @@
 <script setup lang="js">
 import { ref } from 'vue'
 
-const props = defineProps({
-  cabines: Array
+defineProps({
+  cabines: {
+    type: Array,
+    default: () => [],
+    required: true
+  }
 })
 
 const emit = defineEmits(['reservaCriada'])
@@ -25,7 +29,7 @@ function reservaCabine() {
         <label for="product-cabin">Selecionar classe:</label>
         <select id="product-cabin" v-model="cabineIndex">
           <option disabled value="-1">Selecione uma cabine</option>
-          <option v-for="(cabine, index) in props.cabines" :value="index" :key="index">
+          <option v-for="(cabine, index) in cabines" :value="index" :key="index">
             {{ cabine.nome }}
             {{ cabine.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) }}
           </option>

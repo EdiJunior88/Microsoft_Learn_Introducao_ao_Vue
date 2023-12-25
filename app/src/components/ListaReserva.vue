@@ -2,7 +2,11 @@
 import { computed, ref } from 'vue'
 
 const props = defineProps({
-  reservas: Array
+  reservas: {
+    type: Array,
+    default: () => [],
+    required: true
+  }
 })
 
 const totalPainel = computed(() => {
