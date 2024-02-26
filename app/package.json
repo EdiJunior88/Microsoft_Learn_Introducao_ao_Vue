@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "vue": "^3.4.19",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.7.2",
@@ -20,8 +20,8 @@
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.21.1",
+    "eslint-plugin-vue": "^9.22.0",
     "prettier": "^3.2.5",
-    "vite": "^5.1.3"
+    "vite": "^5.1.4"
   }
 }
